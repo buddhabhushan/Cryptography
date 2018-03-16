@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+    cout<<"Write your message in CAPITAL letters : ";
+    string msg;
+    getline(cin,msg);
+    cout<<"What had you substituted for 'A' : ";
+    char key;
+    cin>>key;
+    int dif=key-'A';
+    for(int i=0;i<msg.size();i++){
+        if(msg[i]==' ')
+        continue;
+        msg[i]=msg[i]-dif;
+        if(msg[i]<65){
+            msg[i]+=26;
+        }
+    }
+    cout<<msg;
+    return 0;
+}
+
